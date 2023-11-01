@@ -5,14 +5,14 @@
 }
 
 .nav-title {
-    padding: 30px;
+    padding-left: 30px;
     font-family: 'Billabong'; /* Use the same font-family name you defined in @font-face */
     color: black;
 }
 
-.sidebar{
-    display: flex;
-
+.sidebar ul{
+    display: inline-block;
+    padding-left: 10px;
 }
 .sidebar ul li {
      list-style: none;
@@ -35,18 +35,34 @@
     padding-left: 5px;
 }
 .vertical-line {
-    border-left: 2px solid #000; /* Adjust the color and width as needed */
-    height: 100%; /* Adjust the height to match your layout */
-    margin-left: 20px; /* Adjust the margin to control the distance between the line and your content */
+   border-left: 1px solid black;
+  height:100%;
+  position: absolute;
+  left: 20%;
+  margin-left: 5px;
+  top: 0;
 }
-.profile{
+.profile {
     display: flex;
-    justify-content: space-between;
+    font-size: 15px;
+    color: black;
+    padding-bottom: 10px;
+}
+
+.profile-pic, .profile-details {
+    margin: 5px 120px; /* Adjust the margins as needed to control spacing */
+}
+.btn-profile{
+    width: 100px;
+    border-radius: 5px;
+
 }
 .profile-details{
    display: inline-block;
  }
-.profile-name{
+.highlights{
     display: flex;
-    justify-content: space-between;
+    margin-top: 50px;
+    padding-left: 10px;
 }
+

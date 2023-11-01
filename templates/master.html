@@ -59,7 +59,6 @@
         <li>
             <a href="{% url 'profile-url' %}">
                 <i class="fa fa-user fa-2x" aria-hidden="true"></i> <span class="side-menu-text"> Profile</span>
-
             </a>
         </li>
         <li>
@@ -73,44 +72,79 @@
 <div class="vertical-line"></div>
 
 <div class="row profile" >
-    <div class="col-sm-3 ">
-                <img src="{% static '/images/profile-pic.png' %}" alt="" class="rounded-circle">
+    <div class="profile-pic ">
+        <img src="{% static 'images/profile-pic.jpg' %}" alt="" class="rounded" style="border-radius: 50%; width: 180px; height: 180px">
      </div>
      <div class="row profile-details">
-         <div class="row profile-name ">
-            <div class="col-sm-3">
+         <div class="row profile-name">
+            <div class="col-sm-4  ">
                 <p >iam_apondi</p>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-6 ">
                 <button class="btn-profile">Edit profile</button>
             </div>
-            <div class="col-sm-3">
-                <i class="fa fa-gear fa-2x"></i>
+            <div class="col-sm-2">
+                <i class="fa fa-gear fa-2x "></i>
             </div>
          </div>
         <div class="row">
-          <div class="col-sm-3 ">
+          <div class="col-sm-4 ">
               <p>posts</p>
           </div>
-            <div class="col-sm-3">
+            <div class="col-sm-6">
                <p>followers</p>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-2">
                 <p>following</p>
             </div>
+
         </div>
         <div class="row">
-          <div class="col-sm-5 ">
+          <div class="col-sm-9">
               <p>Apondi Ashley</p>
+          </div>
+        </div>
+         <div class="row">
+          <div class="col-sm-9">
+              <p>About</p>
           </div>
         </div>
     </div>
 </div>
 
+{#=========================== HIGHLIGHTS =====================================#}
+<div class="row highlights">
+    <div class="col-sm-3 text-center">
+        <img src="{% static 'images/beach.jpg' %}" alt="" class="rounded" style="border-radius: 50%; width: 100px; height: 100px">
+        <br>
+        <p >beach</p>
+    </div>
+     <div class="col-sm-3 text-center">
+        <img src="{% static 'images/pets.jpg' %}" alt="" class="rounded" style="border-radius: 50%;width: 100px; height: 100px">
+    <br>
+        <p >pets</p>
+     </div>
+     <div class="col-sm-3 text-center">
+        <img src="{% static 'images/sunset.jpg' %}" alt="" class="rounded" style="border-radius: 50%;width: 100px; height: 100px">
+    <br>
+        <p >sunsets</p>
+     </div>
+     <div class="col-sm-3 text-center">
+        <img src="{% static 'images/cars.jpg' %}" alt="" class="rounded" style="border-radius: 50%;width: 100px; height: 100px">
+    <br>
+        <p >cars</p>
+     </div>
+</div>
+
+<hr style="border: 1px solid grey">
+
+{#============================POSTS,REELS,SAVED,TAGS======================================#}
 
 
 
-<hr>
+
+
+
 {% block content %}
 
 {% endblock %}
