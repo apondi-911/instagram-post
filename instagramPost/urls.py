@@ -16,6 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+
+from Post.views import NewPost
 from . import views as ash_views
 from Post import views
 
@@ -30,4 +32,5 @@ urlpatterns = [
     path('create/', ash_views.create, name='create-url'),
     path('profile/', ash_views.explore, name='profile-url'),
     path('more/', ash_views.more, name='more-url'),
+    path('newpost', NewPost, name='newpost')
 ]
