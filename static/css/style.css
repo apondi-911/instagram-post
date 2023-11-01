@@ -1,0 +1,52 @@
+@font-face {
+    font-family: billabong;
+    src: url(fonts/billabong.ttf);
+    font-weight: bold;
+}
+
+.nav-title {
+    padding: 30px;
+    font-family: 'Billabong'; /* Use the same font-family name you defined in @font-face */
+    color: black;
+}
+
+.sidebar{
+    display: flex;
+
+}
+.sidebar ul li {
+     list-style: none;
+     padding: 10px;
+}
+.sidebar ul li a{
+    text-decoration: none;
+    color: black;
+}
+.sidebar ul li a:hover{
+    background-color: rgba(0, 0, 0, 0.62);
+    width: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+
+}
+.side-menu-text{
+    font-size: medium;
+    padding-left: 5px;
+}
+.vertical-line {
+    border-left: 2px solid #000; /* Adjust the color and width as needed */
+    height: 100%; /* Adjust the height to match your layout */
+    margin-left: 20px; /* Adjust the margin to control the distance between the line and your content */
+}
+.profile{
+    display: flex;
+    justify-content: space-between;
+}
+.profile-details{
+   display: inline-block;
+ }
+.profile-name{
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,118 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block ttl %}
+
+    {% endblock %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+<body>
+<div class="nav-title">
+ <h1>Instagram</h1>
+</div>
+
+<div class="sidebar col-sm-3">
+
+    <ul>
+        <li>
+            <a href="{% url 'home-url' %}">
+                <i class="fa fa-home fa-2x" aria-hidden="true"></i> <span class="side-menu-text"> Home </span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'search-url' %}">
+                <i class="fa fa-search fa-2x" aria-hidden="true"></i> <span class="side-menu-text"> Search </span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'explore-url' %}">
+                <i class="fa fa-compass fa-2x" aria-hidden="true"></i><span class="side-menu-text"> Explore </span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'reels-url' %}">
+                <i class="fa fa-caret-square-o-right fa-2x" aria-hidden="true"></i> <span class="side-menu-text"> Reels</span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'messages-url' %}">
+                <i class="fa fa-commenting-o fa-2x" aria-hidden="true"></i><span class="side-menu-text"> Messages </span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'notifications-url' %}">
+                <i class="fa fa-heart-o fa-2x" aria-hidden="true"></i> <span class="side-menu-text"> Notifications</span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'create-url' %}">
+                <i class="fa fa-plus-square-o fa-2x" aria-hidden="true"></i> <span class="side-menu-text "> Create</span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'profile-url' %}">
+                <i class="fa fa-user fa-2x" aria-hidden="true"></i> <span class="side-menu-text"> Profile</span>
+
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'more-url' %}">
+                <i class="fa fa-bars fa-2x" aria-hidden="true"></i> <span class="side-menu-text"> More</span>
+            </a>
+        </li>
+
+    </ul>
+</div>
+<div class="vertical-line"></div>
+
+<div class="row profile" >
+    <div class="col-sm-3 ">
+                <img src="{% static '/images/profile-pic.png' %}" alt="" class="rounded-circle">
+     </div>
+     <div class="row profile-details">
+         <div class="row profile-name ">
+            <div class="col-sm-3">
+                <p >iam_apondi</p>
+            </div>
+            <div class="col-sm-3">
+                <button class="btn-profile">Edit profile</button>
+            </div>
+            <div class="col-sm-3">
+                <i class="fa fa-gear fa-2x"></i>
+            </div>
+         </div>
+        <div class="row">
+          <div class="col-sm-3 ">
+              <p>posts</p>
+          </div>
+            <div class="col-sm-3">
+               <p>followers</p>
+            </div>
+            <div class="col-sm-3">
+                <p>following</p>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-5 ">
+              <p>Apondi Ashley</p>
+          </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<hr>
+{% block content %}
+
+{% endblock %}
+</body>
+</html>
