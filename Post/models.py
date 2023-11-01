@@ -10,10 +10,6 @@ def user_directory_path(instance, filename):
     return 'user{0}/{1}'.format(instance.user.id, filename)
 
 
-class Tag(models.Model):
-    title = models.CharField(max_length=100, verbose_name="Tag")
-    slug = models.SlugField(null=False, unique=True, default=uuid.uuid1)
-
 
 class Post(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -27,3 +23,4 @@ class Post(models.Model):
 class Follow(models.Model):
     follower = models.ForeignKey(User, on_delete=models.CASCADE, related_name="follower")
     following = models.ForeignKey(User, on_delete=models.CASCADE, related_name="following")
+
