@@ -1,11 +1,171 @@
 {% extends 'master.html' %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% load static %}
 
-</body>
-</html>
+    {% block title %}
+       <title>Profile</title>
+    {% endblock %}
+
+ {% block additional_css %}
+
+     <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+ {% endblock %}
+
+{% block content %}
+
+<div class="nav-title-container">
+    <div class="nav-title">
+        <h2>Instagram</h2>
+    </div>
+    <div class="login-container">
+        <h4><a href="{% url 'login-url' %}">Login</a></h4>
+    </div>
+</div>
+<div class="fixed-sidebar col-sm-3">
+
+    <ul>
+        <li>
+            <a href="{% url 'home-url' %}">
+                <i class="fa fa-home fa-2x" aria-hidden="true"></i> <span class="side-menu-text"> Home </span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'search-url' %}">
+                <i class="fa fa-search fa-2x" aria-hidden="true"></i> <span class="side-menu-text"> Search </span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'explore-url' %}">
+                <i class="fa fa-compass fa-2x" aria-hidden="true"></i><span class="side-menu-text"> Explore </span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'reels-url' %}">
+                <i class="fa fa-caret-square-o-right fa-2x" aria-hidden="true"></i> <span class="side-menu-text"> Reels</span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'messages-url' %}">
+                <i class="fa fa-commenting-o fa-2x" aria-hidden="true"></i><span class="side-menu-text"> Messages </span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'notifications-url' %}">
+                <i class="fa fa-heart-o fa-2x" aria-hidden="true"></i> <span class="side-menu-text"> Notifications</span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'create-url' %}">
+                <i class="fa fa-plus-square-o fa-2x" aria-hidden="true"></i> <span class="side-menu-text "> Create</span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'profile-url' %}">
+                <i class="fa fa-user fa-2x" aria-hidden="true"></i> <span class="side-menu-text"> Profile</span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'more-url' %}">
+                <i class="fa fa-bars fa-2x" aria-hidden="true"></i> <span class="side-menu-text"> More</span>
+            </a>
+        </li>
+
+    </ul>
+</div>
+<div class="vertical-line"></div>
+
+<div class="row profile" >
+    <div class="profile-pic ">
+        <img src="{% static 'images/profile-pic.jpg' %}" alt="" class="rounded" style="border-radius: 50%; width: 180px; height: 180px">
+     </div>
+     <div class="row profile-details">
+         <div class="row profile-name">
+            <div class="col-sm-4  ">
+                <p >iam_apondi</p>
+            </div>
+            <div class="col-sm-6 ">
+                <button class="btn-profile">Edit profile</button>
+            </div>
+            <div class="col-sm-2">
+                <i class="fa fa-gear fa-2x "></i>
+            </div>
+         </div>
+        <div class="row">
+          <div class="col-sm-4 ">
+              <p>posts</p>
+          </div>
+            <div class="col-sm-6">
+               <p>followers</p>
+            </div>
+            <div class="col-sm-2">
+                <p>following</p>
+            </div>
+
+        </div>
+        <div class="row">
+          <div class="col-sm-9">
+              <p>Apondi Ashley <span class="pronoun">she/her</span></p>
+          </div>
+        </div>
+         <div class="row">
+          <div class="col-sm-9">
+              <p>Bio</p>
+          </div>
+        </div>
+    </div>
+</div>
+
+{#=========================== HIGHLIGHTS =====================================#}
+<div class="row highlights">
+    <div class="col-sm-3 text-center">
+        <img src="{% static 'images/beach.jpg' %}" alt="" class="rounded" style="border-radius: 50%; width: 100px; height: 100px">
+        <br>
+        <p >beach</p>
+    </div>
+
+     <div class="col-sm-3 text-center">
+        <img src="{% static 'images/pets.jpg' %}" alt="" class="rounded" style="border-radius: 50%;width: 100px; height: 100px">
+        <br>
+        <p >pets</p>
+     </div>
+     <div class="col-sm-3 text-center">
+        <img src="{% static 'images/sunset.jpg' %}" alt="" class="rounded" style="border-radius: 50%;width: 100px; height: 100px">
+    <br>
+        <p >sunsets</p>
+     </div>
+     <div class="col-sm-3 text-center">
+        <img src="{% static 'images/cars.jpg' %}" alt="" class="rounded" style="border-radius: 50%;width: 100px; height: 100px">
+    <br>
+        <p >cars</p>
+     </div>
+</div>
+
+<hr style="border: 1px solid grey">
+
+    {#============================POSTS,REELS,SAVED,TAGS======================================#}
+
+    <div class="row posts">
+        <div class="col-sm-6">
+            <img src="{% static 'images/sunset.jpg' %}" alt="" width="500px" height="500px">
+               <div class="row icons">
+                    <div class="col-sm-2">
+                        <i class="fa fa-heart-o fa-2x" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-sm-2">
+                        <i class="fa fa-comment-o fa-2x" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-sm-2">
+                        <i class="fa fa-send-o fa-2x" aria-hidden="true"></i>
+                    </div>
+                   <div class="justify-content-end bookmark">
+                        <i class="fa fa-bookmark-o fa-2x" aria-hidden="true"></i>
+                    </div>
+               </div>
+        </div>
+    </div>
+
+{% endblock %}

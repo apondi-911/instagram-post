@@ -27,6 +27,7 @@ urlpatterns = [
     path('messages/', ash_views.messages, name='messages-url'),
     path('notifications/', ash_views.notifications, name='notifications-url'),
     path('create/', ash_views.create, name='create-url'),
-    path('profile/', ash_views.explore, name='profile-url'),
+    path('profile/', ash_views.profile, name='profile-url'),
     path('more/', ash_views.more, name='more-url'),
+    path('login/', ash_views.login, name="login-url")
 ]
