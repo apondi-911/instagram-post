@@ -1,6 +1,6 @@
 @font-face {
     font-family: billabong;
-    src: url(fonts/billabong.ttf);
+    src: url(../fonts/billabong.ttf);
     font-weight: bold;
 }
  .nav-title-container {
