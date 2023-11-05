@@ -30,5 +30,5 @@ urlpatterns = [
     path('profile/', ash_views.profile, name='profile-url'),
     path('more/', ash_views.more, name='more-url'),
     path('login/', ash_views.login, name="login-url"),
-    path('sign-up/', ash_views.sign_up, name="signUp-url")
+    path('sign_up/', ash_views.sign_up, name ="signUp-url")
 ]
