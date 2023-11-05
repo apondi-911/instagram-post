@@ -16,10 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
-from Post.views import NewPost
 from . import views as ash_views
-from Post import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,7 +27,8 @@ urlpatterns = [
     path('messages/', ash_views.messages, name='messages-url'),
     path('notifications/', ash_views.notifications, name='notifications-url'),
     path('create/', ash_views.create, name='create-url'),
-    path('profile/', ash_views.explore, name='profile-url'),
+    path('profile/', ash_views.profile, name='profile-url'),
     path('more/', ash_views.more, name='more-url'),
-    path('newpost', NewPost, name='newpost')
+    path('login/', ash_views.login, name="login-url"),
+    path('sign-up/', ash_views.sign_up, name="signUp-url")
 ]

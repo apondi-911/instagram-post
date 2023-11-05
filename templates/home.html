@@ -1,11 +1,145 @@
 {% extends 'master.html' %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-</head>
-<body>
+{% load static %}
+     {% block title %}
+        <title>Home</title>
+    {% endblock %}
+ {% block additional_css %}
 
-</body>
-</html>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+ {% endblock %}
+
+{% block content %}
+<div class="nav-title-container">
+    <div class="nav-title">
+        <h2>Instagram</h2>
+    </div>
+    <div class="login-container">
+        <h4><a href="{% url 'login-url' %}">Login</a></h4>
+    </div>
+</div>
+<div class="fixed-sidebar col-sm-3">
+
+    <ul>
+        <li>
+            <a href="{% url 'home-url' %}">
+                <i class="fa fa-home fa-2x" aria-hidden="true"></i> <span class="side-menu-text"> Home </span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'search-url' %}">
+                <i class="fa fa-search fa-2x" aria-hidden="true"></i> <span class="side-menu-text"> Search </span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'explore-url' %}">
+                <i class="fa fa-compass fa-2x" aria-hidden="true"></i><span class="side-menu-text"> Explore </span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'reels-url' %}">
+                <i class="fa fa-caret-square-o-right fa-2x" aria-hidden="true"></i> <span class="side-menu-text"> Reels</span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'messages-url' %}">
+                <i class="fa fa-commenting-o fa-2x" aria-hidden="true"></i><span class="side-menu-text"> Messages </span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'notifications-url' %}">
+                <i class="fa fa-heart-o fa-2x" aria-hidden="true"></i> <span class="side-menu-text"> Notifications</span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'create-url' %}">
+                <i class="fa fa-plus-square-o fa-2x" aria-hidden="true"></i> <span class="side-menu-text "> Create</span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'profile-url' %}">
+                <i class="fa fa-user fa-2x" aria-hidden="true"></i> <span class="side-menu-text"> Profile</span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'more-url' %}">
+                <i class="fa fa-bars fa-2x" aria-hidden="true"></i> <span class="side-menu-text"> More</span>
+            </a>
+        </li>
+
+    </ul>
+</div>
+<div class="vertical-line"></div>
+
+
+{#=========================== HIGHLIGHTS =====================================#}
+ <div class="row stories-details">
+{#     <h4> <a href="{% url 'login-url' %}">Login</a></h4>#}
+ </div>
+<div class="row stories">
+    <div class="col-sm-3 text-center">
+        <img src="{% static 'images/beach.jpg' %}" alt="" class="rounded" style="border-radius: 50%; width: 100px; height: 100px">
+        <br>
+        <p >Your stories</p>
+    </div>
+     <div class="col-sm-3 text-center">
+        <img src="{% static 'images/pets.jpg' %}" alt="" class="rounded" style="border-radius: 50%;width: 100px; height: 100px">
+    <br>
+        <p >_morata</p>
+     </div>
+     <div class="col-sm-3 text-center">
+        <img src="{% static 'images/sunset.jpg' %}" alt="" class="rounded" style="border-radius: 50%;width: 100px; height: 100px">
+    <br>
+        <p >murugi_ke</p>
+     </div>
+     <div class="col-sm-3 text-center">
+        <img src="{% static 'images/cars.jpg' %}" alt="" class="rounded" style="border-radius: 50%;width: 100px; height: 100px">
+    <br>
+        <p >@diamond_platnumz</p>
+     </div>
+     <div class="col-sm-3 text-center">
+            <img src="{% static 'images/cars.jpg' %}" alt="" class="rounded" style="border-radius: 50%;width: 100px; height: 100px">
+        <br>
+            <p >omah_Lay</p>
+         </div>
+     <div class="col-sm-3 text-center">
+            <img src="{% static 'images/cars.jpg' %}" alt="" class="rounded" style="border-radius: 50%;width: 100px; height: 100px">
+        <br>
+            <p >@phoebe</p>
+         </div>
+     <div class="col-sm-3 text-center">
+            <img src="{% static 'images/cars.jpg' %}" alt="" class="rounded" style="border-radius: 50%;width: 100px; height: 100px">
+        <br>
+            <p >mary_lay</p>
+         </div>
+
+</div>
+
+
+{#============================POSTS,REELS,SAVED,TAGS======================================#}
+
+    <div class="row posts">
+        <div class="col-sm-6 ">
+            <img src="{% static 'images/sunset.jpg' %}" alt="" width="500px" height="500px">
+               <div class="row icons">
+                    <div class="col-sm-2">
+                        <i class="fa fa-heart-o fa-2x" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-sm-2">
+                        <i class="fa fa-comment-o fa-2x" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-sm-2">
+                        <i class="fa fa-send-o fa-2x" aria-hidden="true"></i>
+                    </div>
+                   <div class="justify-content-end bookmark">
+                        <i class="fa fa-bookmark-o fa-2x" aria-hidden="true"></i>
+                    </div>
+               </div>
+        </div>
+    </div>
+    <hr style="border: 1px solid grey; margin-left: 25%">
+{% endblock %}

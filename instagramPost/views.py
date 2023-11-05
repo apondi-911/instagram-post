@@ -37,3 +37,9 @@ def more(request):
     return render(request, 'more.html')
 
 
+def login(request):
+    return render(request, 'login.html')
+
+
+def sign_up(request):
+    return render(request, 'sign_up.html')
