@@ -1,0 +1,35 @@
+{% extends 'master.html' %}
+{% load static %}
+
+    {% block title %}
+       <title>Sign_Up Form</title>
+    {% endblock %}
+
+ {% block additional_css %}
+
+     <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+ {% endblock %}
+
+{% block content %}
+    <div class="nav-title-container">
+    <div class="nav-title">
+        <h2>Instagram</h2>
+    </div>
+{#    <div class="login-container">#}
+{#        <h4><a href="{% url 'login-url' %}">Login</a></h4>#}
+{#    </div>#}
+</div>
+
+    <form  method="post" class="formStyle">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" >SignUp</button>
+        <p>Already have an account?<a href="{% url 'login-url' %}">Login</a></p>
+
+    </form>
+{% endblock %}

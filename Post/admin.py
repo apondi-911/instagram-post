@@ -4,3 +4,5 @@ from.models import Post, Follow, Tag
 admin.site.register(Post)
 admin.site.register(Follow)
 admin.site.register(Tag)
+
+

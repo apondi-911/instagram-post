@@ -37,3 +37,14 @@ def more(request):
     return render(request, 'more.html')
 
 
+def login(request):
+    return render(request, 'registration/login.html')
+
+
+def sign_up(request):
+    return render(request, 'registration/sign_up.html')
+
+
+def msg_view(request):
+    show_message = request.user.is_authenticated
+    return render(request, 'home.html', {'show_message': show_message})

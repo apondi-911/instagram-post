@@ -10,8 +10,13 @@ def user_directory_path(instance, filename):
     return 'user{0}/{1}'.format(instance.user.id, filename)
 
 
+class UserProfile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='profile_images/', default='profile_images/default_user.png')
+
+
 class Tag(models.Model):
-    title = models.CharField(max_length=100, verbose_name="Tag")
+    title = models.CharField(max_length=75, verbose_name='Tag')
     slug = models.SlugField(null=False, unique=True, default=uuid.uuid1)
 
 
@@ -27,3 +32,8 @@ class Post(models.Model):
 class Follow(models.Model):
     follower = models.ForeignKey(User, on_delete=models.CASCADE, related_name="follower")
     following = models.ForeignKey(User, on_delete=models.CASCADE, related_name="following")
+
+
+class Likes(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="post_likes")

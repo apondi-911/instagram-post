@@ -1,0 +1,78 @@
+@font-face{
+    font-family: billabong;
+    src: url(../fonts/billabong.ttf);
+    font-weight: bold;
+}
+
+.nav-title {
+
+    margin-bottom: 30px;
+    font-size: 50px;
+    font-family: 'Billabong', serif; /* Use the same font-family name you defined in @font-face */
+    color: black;
+}
+
+.formStyle {
+  width: 400px;
+  margin: 20px auto; /* Horizontally center-align the form */
+  text-align: center; /* Center-align the form contents */
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.formStyle h2 {
+  color: #333;
+}
+
+.formStyle label {
+  /*display: block; !* Display form labels as block elements *!*/
+  margin-bottom: 10px;
+}
+.formStyle input[type="text"],
+.formStyle input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}.formStyle button {
+  background-color: #0099ff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.formStyle button:hover {
+  background-color: #0077cc;
+}
+
+.formStyle p {
+  margin-top: 10px;
+}
+
+.formStyle a {
+  text-decoration: none;
+  color: #0099ff;
+}
+
+/* Center-align the "<< Back" link */
+.formStyle h4 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Styling for the navigation title */
+.nav-title-container h2 {
+  text-align: center;
+}
+
+.nav-title {
+
+
+  /*padding: 10px 10px;*/
+  border-radius: 5px;
+}
