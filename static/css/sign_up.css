@@ -1,19 +1,65 @@
-@font-face {
-    font-family: billabong;
-    src: url(../fonts/billabong.ttf);
-    font-weight: bold;
+/* In your sign_up.css file */
+.formStyle {
+  width: 300px;
+  margin: 0 auto; /* Horizontally center-align the form */
+  text-align: center; /* Center-align the form contents */
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
+.formStyle h2 {
+  color: #333;
+}
+
+.formStyle label {
+  display: block; /* Display form labels as block elements */
+  margin-bottom: 10px;
+}
+
+.formStyle input[type="text"],
+.formStyle input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.formStyle button {
+  background-color: #0099ff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.formStyle button:hover {
+  background-color: #0077cc;
+}
+
+.formStyle p {
+  margin-top: 10px;
+}
+
+.formStyle a {
+  text-decoration: none;
+  color: #0099ff;
+}
+
+/* Styling for the navigation title */
+.nav-title-container {
+  text-align: center;
+}
+
 .nav-title {
-    padding-left: 30px;
-    margin-bottom: 30px;
-    font-size: 50px;
-    font-family: 'Billabong', serif; /* Use the same font-family name you defined in @font-face */
-    color: black;
+  background-color: #0099ff;
+  color: #fff;
+  padding: 10px 0;
+  border-radius: 5px;
 }
-.formStyle{
-    border-radius: 10px;
-    border-color: black;
-    margin: auto;
-    width: 300px;
-    height: 300px;
-}
+
+/* Add any additional styling you need */
